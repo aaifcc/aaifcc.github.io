@@ -14,9 +14,11 @@
 - 英文版网页（English HTML）：`/en/`
 - 英文版 Markdown（English Markdown）：`/en/index.md`
 - 官方网站（Official Foundation Site）：<https://aaif.io/>
+- 基金会官方 GitHub（Official Foundation GitHub）：<https://github.com/aaif>
+- 中文社区 GitHub 组织（Chinese Community GitHub Org）：<https://github.com/aaifcc>
+- 站点源码仓库（Site Repository）：<https://github.com/aaifcc/aaifcc.github.io>
 - 申请成为 AAIF 本地组织者（Become an AAIF Organizer）：<https://docs.google.com/forms/d/e/1FAIpQLScuUbCYJc9JNidWZpjQJXaxr2aFHYG5vFh9jJ0JxxaTahK7KA/viewform>
 - 域名赞助（Domain Sponsor）：[vivo](https://github.com/vivo)
-- 开源仓库（Source Repository）：<https://github.com/aaifcc/aaifcc.github.io>
 - 协作规范与 Agent 会话记录：`AGENTS.md`、`docs/agent-sessions/`
 
 ## 即将到来的活动 / Upcoming Events (UTC+8)

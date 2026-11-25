@@ -10,8 +10,10 @@
 
 - 社区名称：AAIF 中文社区
 - 官方网站（基金会）：<https://aaif.io/>
+- 基金会官方 GitHub：<https://github.com/aaif>
+- 中文社区 GitHub 组织：<https://github.com/aaifcc>
+- 站点源码仓库：<https://github.com/aaifcc/aaifcc.github.io>
 - 社区站点域名赞助：[vivo](https://github.com/vivo)
-- 源码仓库：<https://github.com/aaifcc/aaifcc.github.io>
 - 时间基准：以下所有活动时间均为北京时间（UTC+8）
 
 ## 即将到来的活动

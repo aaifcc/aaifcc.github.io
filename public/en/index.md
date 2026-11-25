@@ -10,8 +10,10 @@
 
 - Community: AAIF Chinese Community (`AAIF 中文社区`)
 - Official Foundation Website: <https://aaif.io/>
+- Official Foundation GitHub: <https://github.com/aaif>
+- Chinese Community GitHub Org: <https://github.com/aaifcc>
+- Site Source Repository: <https://github.com/aaifcc/aaifcc.github.io>
 - Domain Sponsor: [vivo](https://github.com/vivo)
-- Source Repository: <https://github.com/aaifcc/aaifcc.github.io>
 - Language Editions:
   - Chinese HTML: `/` · Chinese Markdown: `/index.md`
   - English HTML: `/en/` · English Markdown: `/en/index.md`

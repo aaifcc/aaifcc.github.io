@@ -963,12 +963,22 @@ a.ev:focus-visible .ev__state {
   font: 400 2.25rem/1.3 var(--sans);
 }
 
-.split__text {
+.split__body {
   grid-column: 9 / span 4;
   align-self: end;
+}
+
+.split__text {
   color: var(--fg-2);
   font-size: 1.0625rem;
   line-height: 1.9;
+}
+
+.split__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 20px;
 }
 
 /* ---------- 加入：珊瑚色面板，墨色文字 ---------- */
@@ -1512,7 +1522,7 @@ html[lang="en"] .foot__word {
     font-size: 1.625rem;
   }
 
-  .split__text {
+  .split__body {
     margin-top: 32px;
   }
 
