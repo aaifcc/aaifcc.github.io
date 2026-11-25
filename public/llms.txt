@@ -72,7 +72,7 @@
 
 | 城市 / City | 社区活动组织者 / Community Organizers | 城市日历 / City Calendar | 近期活动 / Upcoming Event |
 | --- | --- | --- | --- |
-| 北京 / Beijing | 宋净超（Jimmy Song）、段少婷（Fiona Duan）、刘卓鑫（Zhuoxin Liu）、王蓉、张慧 | <https://luma.com/aaif-beijing> | [12.12 报名](https://luma.com/43j4ovh8) |
+| 北京 / Beijing | 宋净超（Jimmy Song）、段少婷（Fiona Duan）、刘卓鑫（leonliuzx）、王蓉、张慧 | <https://luma.com/aaif-beijing> | [12.12 报名](https://luma.com/43j4ovh8) |
 | 深圳 / Shenzhen | Chris 杨（Chris Yang） | <https://luma.com/aaif-shenzhen> | [12.12 报名](https://luma.com/01mkdbpc) |
 | 上海 / Shanghai | Richard Lin、邓辉（Hui Deng） | <https://luma.com/aaif-shanghai> | [12.13 报名](https://luma.com/x2qerafa) |
 | 杭州 / Hangzhou | Amber Wang | <https://luma.com/aaif-hangzhou> | 待公布 / TBD |

@@ -71,7 +71,7 @@
 
 | City | Community Organizers | City Calendar | Upcoming Event |
 | --- | --- | --- | --- |
-| Beijing | Jimmy Song, Fiona Duan, Zhuoxin Liu, Wang Rong, Zhang Hui | [Luma Calendar](https://luma.com/aaif-beijing) | [Dec 12 Event](https://luma.com/43j4ovh8) |
+| Beijing | Jimmy Song, Fiona Duan, Zhuoxin Liu (leonliuzx), Wang Rong, Zhang Hui | [Luma Calendar](https://luma.com/aaif-beijing) | [Dec 12 Event](https://luma.com/43j4ovh8) |
 | Shenzhen | Chris Yang | [Luma Calendar](https://luma.com/aaif-shenzhen) | [Dec 12 Event](https://luma.com/01mkdbpc) |
 | Shanghai | Richard Lin, Hui Deng | [Luma Calendar](https://luma.com/aaif-shanghai) | [Dec 13 Event](https://luma.com/x2qerafa) |
 | Hangzhou | Amber Wang | [Luma Calendar](https://luma.com/aaif-hangzhou) | Next event TBD |

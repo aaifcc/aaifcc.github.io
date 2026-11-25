@@ -67,7 +67,7 @@
 
 | 城市 | 社区活动组织者（Community Organizer） | 城市日历 | 近期活动 |
 | --- | --- | --- | --- |
-| 北京 | 宋净超（Jimmy Song）、段少婷、刘卓鑫、王蓉、张慧 | [Luma 日历](https://luma.com/aaif-beijing) | [12.12 报名](https://luma.com/43j4ovh8) |
+| 北京 | 宋净超（Jimmy Song）、段少婷、刘卓鑫（leonliuzx）、王蓉、张慧 | [Luma 日历](https://luma.com/aaif-beijing) | [12.12 报名](https://luma.com/43j4ovh8) |
 | 深圳 | Chris 杨 | [Luma 日历](https://luma.com/aaif-shenzhen) | [12.12 报名](https://luma.com/01mkdbpc) |
 | 上海 | Richard Lin、邓辉 | [Luma 日历](https://luma.com/aaif-shanghai) | [12.13 报名](https://luma.com/x2qerafa) |
 | 杭州 | Amber Wang | [Luma 日历](https://luma.com/aaif-hangzhou) | 近期活动待公布 |
