@@ -19,7 +19,7 @@
   --line: rgb(236 231 222 / 0.2);
   --line-strong: rgb(236 231 222 / 0.72);
 
-  --m: 40px;
+  --m: clamp(40px, 4.6vw, 68px);
   --gap: 24px;
   --bar-h: 64px;
   --cols: repeat(12, minmax(0, 1fr));
@@ -622,6 +622,8 @@ br.m {
   /* 按容器宽度自适应，确保 200% 字体缩放时绝不折行重叠，且数字与「待定」占位高度一致 */
   min-height: 0.92em;
   font: 500 clamp(2.75rem, 25cqi, 7rem) / 0.92 var(--display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.025em;
   white-space: nowrap;
 }
 
@@ -675,7 +677,7 @@ br.m {
 /* ---------- 分区 ---------- */
 
 .sec {
-  padding: 136px var(--m) 0;
+  padding: clamp(136px, 12.5vw, 188px) var(--m) 0;
   scroll-margin-top: -72px;
 }
 
@@ -684,7 +686,7 @@ br.m {
   grid-template-columns: var(--cols);
   column-gap: var(--gap);
   align-items: end;
-  padding-bottom: 28px;
+  padding-bottom: 32px;
   border-bottom: 1px solid var(--line-strong);
 }
 
@@ -692,6 +694,7 @@ br.m {
   grid-column: 1 / span 2;
   color: var(--lilac);
   font: 400 0.8125rem/1.6 var(--mono);
+  font-variant-numeric: tabular-nums;
 }
 
 .sec__idx span {
@@ -701,13 +704,15 @@ br.m {
 
 .sec__head h2 {
   grid-column: 3 / span 7;
-  font: 500 clamp(2.25rem, 4vw, 3.75rem) / 1.18 var(--display);
+  font: 500 clamp(2.25rem, 4vw, 3.75rem) / 1.16 var(--display);
+  letter-spacing: -0.02em;
 }
 
 .sec__head--big h2 {
   grid-column: 3 / span 10;
-  font-size: clamp(2.5rem, 5.2vw, 5rem);
-  line-height: 1.2;
+  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  line-height: 1.16;
+  letter-spacing: -0.025em;
 }
 
 .sec__aside {
@@ -726,7 +731,7 @@ br.m {
   grid-template-columns: var(--cols);
   column-gap: var(--gap);
   align-items: center;
-  padding-block: 28px 30px;
+  padding-block: 34px 36px;
   border-bottom: 1px solid var(--line);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -746,6 +751,8 @@ a.ev::before {
 .ev__date {
   grid-column: 1 / span 3;
   font: 500 clamp(2rem, 4.1vw, 3.75rem) / 1 var(--display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.025em;
   white-space: nowrap;
 }
 
@@ -841,12 +848,12 @@ a.ev:focus-visible .ev__state {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: clamp(440px, 56vh, 540px);
-  padding: 20px 24px 26px 0;
+  min-height: clamp(480px, 60vh, 580px);
+  padding: 28px 28px 32px 0;
 }
 
 .cities > li + li.city {
-  padding-left: 24px;
+  padding-left: 28px;
 }
 
 .city__idx {
@@ -935,23 +942,33 @@ a.ev:focus-visible .ev__state {
   }
 }
 
-/* ---------- 关于 ---------- */
+/* ---------- 关于：12 列非对称瑞士留白轨道 ---------- */
+
+.about-band {
+  display: grid;
+  grid-template-columns: var(--cols);
+  column-gap: var(--gap);
+  padding-block: 56px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-rail {
+  grid-column: 1 / span 2;
+  padding-top: 4px;
+  color: var(--fg-3);
+  font: 400 0.8125rem/1.6 var(--mono);
+}
 
 .about-grid {
+  grid-column: 3 / span 10;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-bottom: 1px solid var(--line);
+  column-gap: 56px;
 }
 
 .about-col {
   display: flex;
   flex-direction: column;
-  padding: 48px 48px 48px 0;
-}
-
-.about-col + .about-col {
-  padding: 48px 0 48px 48px;
-  border-left: 1px solid var(--line);
 }
 
 .about-col__label {
@@ -960,14 +977,15 @@ a.ev:focus-visible .ev__state {
 }
 
 .about-col h3 {
-  margin-top: 14px;
-  font: 500 1.625rem/1.35 var(--display);
+  margin-top: 12px;
+  font: 500 1.75rem/1.3 var(--display);
+  letter-spacing: -0.015em;
   word-break: normal;
 }
 
 .about-col p:not(.about-col__label):not(.about-col__links) {
-  max-width: 44ch;
-  margin-top: 16px;
+  max-width: 38ch;
+  margin-top: 14px;
   color: var(--fg-2);
   font-size: 1rem;
   line-height: 1.9;
@@ -983,9 +1001,7 @@ a.ev:focus-visible .ev__state {
 }
 
 .proj {
-  padding-top: 52px;
-  padding-bottom: 52px;
-  border-bottom: 1px solid var(--line);
+  grid-column: 3 / span 10;
 }
 
 .proj__head {
@@ -1013,11 +1029,11 @@ a.ev:focus-visible .ev__state {
   border-bottom: 1px solid currentColor;
 }
 
-/* 开放式瑞士索引排布，去掉沉重的四周方框，留出呼吸感 */
+/* Awwwards 式双列大字排版索引：更大字号、双倍留白、悬停轻移 */
 .proj__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 56px;
 }
 
 .proj__grid > li {
@@ -1028,16 +1044,17 @@ a.ev:focus-visible .ev__state {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 20px 10px 24px 0;
+  padding: 24px 10px 28px 0;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: transform 0.28s var(--ease), color 0.2s ease;
 }
 
 .proj__name {
   display: inline-flex;
   align-items: center;
   color: var(--fg);
-  font: 500 1.25rem/1.3 var(--display);
+  font: 500 1.5rem/1.25 var(--display);
+  letter-spacing: -0.015em;
   transition: color 0.2s ease;
 }
 
@@ -1056,13 +1073,17 @@ a.ev:focus-visible .ev__state {
 
 .proj__more {
   margin-top: 24px;
-  padding-top: 18px;
+  padding-top: 20px;
   border-top: 1px solid var(--line);
   color: var(--fg-3);
   font: 400 0.8125rem/1.7 var(--mono);
 }
 
 @media (hover: hover) {
+  .proj__item:hover {
+    transform: translateX(6px);
+  }
+
   .proj__item:hover .proj__name {
     color: var(--coral);
   }
@@ -1088,26 +1109,23 @@ a.ev:focus-visible .ev__state {
   display: grid;
   grid-template-columns: var(--cols);
   column-gap: var(--gap);
-  padding-top: 52px;
+  align-items: start;
+  padding-top: 64px;
 }
 
 .role {
   grid-column: 3 / span 6;
 }
 
-.role__label {
-  color: var(--lilac);
-  font: 400 0.8125rem/1.6 var(--mono);
-}
-
 .role__cn {
-  margin-top: 12px;
-  font: 500 2.5rem/1.3 var(--display);
+  font: 500 clamp(2.25rem, 3.6vw, 3.25rem) / 1.2 var(--display);
+  letter-spacing: -0.02em;
 }
 
 .role__en {
+  margin-top: 6px;
   color: var(--lilac);
-  font: 400 2.25rem/1.3 var(--sans);
+  font: 400 clamp(1.75rem, 2.8vw, 2.5rem) / 1.25 var(--sans);
 }
 
 .split__body {
@@ -1136,7 +1154,7 @@ a.ev:focus-visible .ev__state {
   display: grid;
   grid-template-columns: var(--cols);
   column-gap: var(--gap);
-  padding-block: 26px 56px;
+  padding-block: 44px 72px;
   overflow: hidden;
   background: var(--coral);
   color: var(--ink);
@@ -1238,7 +1256,7 @@ a.ev:focus-visible .ev__state {
 /* ---------- 页脚 ---------- */
 
 .foot {
-  padding: 120px var(--m) 32px;
+  padding: 164px var(--m) 44px;
 }
 
 .foot__word {
@@ -1490,22 +1508,24 @@ html[lang="en"] .foot__word {
     padding-right: 0;
   }
 
+  .about-band {
+    display: block;
+    padding-block: 36px;
+  }
+
+  .about-rail {
+    margin-bottom: 20px;
+    padding-top: 0;
+  }
+
   .about-grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .about-col,
-  .about-col + .about-col {
-    padding: 28px 0;
-    border-left: 0;
-  }
-
-  .about-col + .about-col {
-    border-top: 1px solid var(--line);
+    row-gap: 36px;
   }
 
   .proj__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
   }
 
   .join__way {
