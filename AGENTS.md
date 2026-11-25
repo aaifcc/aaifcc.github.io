@@ -63,4 +63,9 @@ npm run preview  # 预览生产构建产物
 1. `npm run build` 0 报错；
 2. 核对所有 Luma 链接对应的标题、时间（UTC+8）与公开地点；
 3. 在桌面端（1440px）、移动端（390px）与 200% 字体缩放下检查无溢出、无重叠，4 个城市标签切换正常；
-4. 确认 `public/llms.txt` 与 `public/index.md` 已随页面内容同步更新。
+4. 确认 `public/llms.txt`、`public/index.md` 与 `public/en/index.md` 已随页面内容同步更新。
+
+### PR 规范（Pull Request Convention）
+
+- **PR 标题（Title）**：统一使用英文，遵循 Conventional Commits 风格（如 `feat: ...`、`fix: ...`、`docs: ...`），方便国际化检索与上游社区协作。
+- **PR 描述（Description）**：使用**中英双语**（English + 中文），写明改动摘要、线上预览地址与验证情况。
