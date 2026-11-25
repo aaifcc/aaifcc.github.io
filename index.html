@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AAIF 中文社区 · 志愿者维护的社区站点</title>
+    <meta name="description" content="AAIF 中文社区由志愿者维护，在中国各城市组织 AAIF 的见面和活动。这不是基金会官方站点，官方网站是 aaif.io。">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AAIF 中文社区 · 志愿者维护的社区站点">
+    <meta property="og:description" content="AAIF 中文社区由志愿者维护，在中国各城市组织 AAIF 的见面和活动。这不是基金会官方站点，官方网站是 aaif.io。">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="AAIF 中文社区 · 志愿者维护的社区站点">
+    <meta name="twitter:description" content="AAIF 中文社区由志愿者维护，在中国各城市组织 AAIF 的见面和活动。这不是基金会官方站点，官方网站是 aaif.io。">
+    <meta name="theme-color" content="#0b0a09">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230b0a09'/%3E%3Crect x='4' y='4' width='8' height='8' fill='%23ff702d'/%3E%3C/svg%3E">
+    <link rel="alternate" type="text/markdown" href="./llms.txt" title="AAIF 中文社区 Markdown（供 Agent 访问）">
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body id="top" tabindex="-1">
+    <a class="skip" href="#main">跳到主要内容</a>
+
+    <header class="bar">
+      <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>AAIF 中文社区</a>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#events">活动</a>
+        <a href="#cities">城市</a>
+        <a href="#about">关于</a>
+        <a href="#join">加入</a>
+      </nav>
+      <a class="bar__cta" href="https://luma.com/43j4ovh8" target="_blank" rel="noopener noreferrer">
+        <span class="bar__next"><span class="bar__next-label">最近一场</span>北京 <span aria-hidden="true">12.12</span><span class="sr-only">12 月 12 日</span></span>
+        <span class="go">去报名<svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg></span>
+        <span class="sr-only">（在新窗口打开）</span>
+      </a>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__main">
+          <p class="hero__tag"><span class="dot" aria-hidden="true"></span>志愿者运营的社区站点</p>
+
+          <div class="hero__body">
+            <h1 class="hero__title" id="hero-title">
+              <span>在中国各城市，</span>
+              <span>组织 AAIF 的</span>
+              <span>见面和活动。</span>
+            </h1>
+
+            <div class="hero__foot">
+              <p class="hero__desc">我们在北京、深圳、<br>上海等地组织公开活动，<br>把开放的智能体标准讲清楚。</p>
+              <p class="hero__note">这是志愿者维护的中文社区，<br>不是基金会官方站点。<br>官方网站是 <a class="ext" href="https://aaif.io/" target="_blank" rel="noopener noreferrer">aaif.io<span class="sr-only">（在新窗口打开）</span></a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 按城市切换的活动面板。没有脚本时只显示北京这一场，标签栏保持隐藏 -->
+        <div class="nextset" data-nextset role="group" aria-label="各城市的活动">
+          <div class="nextset__bar" hidden>
+            <div class="nextset__tabs" role="tablist" aria-label="选择城市">
+              <button class="nextset__tab" type="button" role="tab" id="next-tab-bj" aria-controls="next-bj" aria-selected="true">北京</button>
+              <button class="nextset__tab" type="button" role="tab" id="next-tab-sz" aria-controls="next-sz" aria-selected="false" tabindex="-1">深圳</button>
+              <button class="nextset__tab" type="button" role="tab" id="next-tab-sh" aria-controls="next-sh" aria-selected="false" tabindex="-1">上海</button>
+              <button class="nextset__tab" type="button" role="tab" id="next-tab-hz" aria-controls="next-hz" aria-selected="false" tabindex="-1">杭州</button>
+            </div>
+            <button class="nextset__toggle" type="button" aria-label="暂停自动切换">
+              <svg class="ico ico--pause" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3.5 2v8M8.5 2v8"/></svg>
+              <svg class="ico ico--play" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5 10 6l-7 4.5z"/></svg>
+            </button>
+          </div>
+          <!-- 装饰图形，不承载信息。四条弧线交汇在橙色方块上，四个城市共用、静止不动；
+               下面垫一幅当前城市地标的几何剪影，比面板深一档，随城市切换。没有脚本时只显示北京。
+               剪影为本站自绘；.ink 是剪影色块，.gap 是底色块，.cut 是压在剪影上的底色细线 -->
+          <div class="next__art" aria-hidden="true">
+            <svg class="arcs" viewBox="0 0 440 300" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
+              <g transform="translate(-30 -90)">
+                <circle cx="-200" cy="500" r="570.1"/>
+                <circle cx="700" cy="520" r="582.6"/>
+                <circle cx="120" cy="-380" r="545.7"/>
+                <circle cx="50" cy="900" r="776.2"/>
+              </g>
+              <rect x="213" y="53" width="14" height="14"/>
+            </svg>
+            <!-- 三幅剪影都立在橙色方块正下方的中轴上（x = 220），两条斜弧从两侧罩住 -->
+            <!-- 北京：故宫太和殿，重檐庑殿顶、十一开间、三层台基 -->
+            <svg class="art is-on" viewBox="0 0 440 300" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
+              <g transform="translate(220 300) scale(.8) translate(-220 -300)">
+                <path class="gap" d="M96 230H344V264H96Z"/>
+                <path class="ink" d="M70 186Q94 192 108 194H332Q346 192 370 186Q322 180 292 150L296 138L284 146H156L144 138L148 150Q118 180 70 186ZM108 194H332V200H108ZM58 214Q84 220 100 222H340Q356 220 382 214Q350 210 336 200H104Q90 210 58 214ZM96 222H344V230H96ZM96 230h6v34h-6zM118 230h6v34h-6zM140 230h6v34h-6zM162 230h6v34h-6zM184 230h6v34h-6zM206 230h6v34h-6zM228 230h6v34h-6zM250 230h6v34h-6zM272 230h6v34h-6zM294 230h6v34h-6zM316 230h6v34h-6zM338 230h6v34h-6zM76 264H364V276H382V288H400V300H40V288H58V276H76Z"/>
+                <path class="cut" d="M108 194H332M104 200H336M100 222H340M76 276H364M58 288H382M206 264V300M234 264V300"/>
+              </g>
+            </svg>
+            <!-- 深圳：地王大厦、平安金融中心、华润总部「春笋」 -->
+            <svg class="art" viewBox="0 0 440 300" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
+              <path class="ink" d="M124 300V180H129V160H131V180H136V190H156V180H161V160H163V180H168V300ZM194 300L197 160L212 112H217L219 78H221L223 112H228L243 160L246 300ZM272 300C270 252 278 196 292 156C306 196 314 252 312 300Z"/>
+              <path class="cut" d="M136 190V300M156 190V300M207 300L209 160L217 112M233 300L231 160L223 112M285 300C284 252 287 200 292 156M299 300C300 252 297 200 292 156"/>
+            </svg>
+            <!-- 上海：东方明珠 -->
+            <svg class="art" viewBox="0 0 440 300" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
+              <g transform="translate(220 300) scale(.755) translate(-100 -300)">
+                <path class="ink" d="M99 6H101L103 48H97ZM95 64H105V102H95ZM82 146h6v44h-6zM97 146h6v44h-6zM112 146h6v44h-6zM82 254h6v38h-6zM97 254h6v38h-6zM112 254h6v38h-6zM80 248L90 256L62 292H48ZM120 248L110 256L138 292H152ZM40 292H160V300H40Z"/>
+                <circle class="ink" cx="100" cy="56" r="9"/>
+                <circle class="ink" cx="100" cy="124" r="25"/>
+                <circle class="ink" cx="100" cy="222" r="36"/>
+                <path class="cut" d="M75.3 124H124.7M64.5 216H135.5M64.5 228H135.5"/>
+              </g>
+            </svg>
+            <!-- 杭州：筹备中，没有剪影，只有底层的弧线 -->
+          </div>
+          <div class="nextset__slides">
+            <article class="next is-on" id="next-bj" aria-labelledby="next-title-bj">
+              <p class="next__head"><span>最近一场</span><span>北京 · 2026</span></p>
+              <p class="next__date"><time datetime="2026-12-12T13:30+08:00"><span aria-hidden="true">12.12</span><span class="sr-only">2026 年 12 月 12 日</span></time></p>
+              <p class="next__when">周六 13:30–20:00</p>
+              <h2 class="next__title" id="next-title-bj">AAIF 北京 Meetup <span class="sep" aria-hidden="true">·</span> <span class="nw">AAIF 成立一周年庆祝酒会</span></h2>
+              <p class="next__place"><span class="next__label">地点</span><span>中关村创业大街氪空间<br>海淀区中关村创业大街 <span class="nw">2 号楼 A 入口 3 层</span></span></p>
+              <p class="next__go"><a class="go go--ink go--stretch" href="https://luma.com/43j4ovh8" target="_blank" rel="noopener noreferrer">去报名<span class="sr-only">：北京站成立庆祝酒会（在新窗口打开）</span><svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg></a></p>
+            </article>
+
+            <article class="next" id="next-sz" aria-labelledby="next-title-sz">
+              <p class="next__head"><span>已开放报名</span><span>深圳 · 2026</span></p>
+              <p class="next__date"><time datetime="2026-12-12T14:00+08:00"><span aria-hidden="true">12.12</span><span class="sr-only">2026 年 12 月 12 日</span></time></p>
+              <p class="next__when">周六 14:00–18:00</p>
+              <h2 class="next__title" id="next-title-sz" lang="en">AAIF Shenzhen × <span class="nw">muShenzhen Meetup #2</span></h2>
+              <p class="next__go"><a class="go go--ink go--stretch" href="https://luma.com/01mkdbpc" target="_blank" rel="noopener noreferrer">去报名<span class="sr-only">：深圳 Meetup #2（在新窗口打开）</span><svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg></a></p>
+            </article>
+
+            <article class="next" id="next-sh" aria-labelledby="next-title-sh">
+              <p class="next__head"><span>已开放报名</span><span>上海 · 2026</span></p>
+              <p class="next__date"><time datetime="2026-12-13T14:00+08:00"><span aria-hidden="true">12.13</span><span class="sr-only">2026 年 12 月 13 日</span></time></p>
+              <p class="next__when">周日 14:00–17:30</p>
+              <h2 class="next__title" id="next-title-sh">AAIF 一周年庆祝 &amp; <span class="nw">智能体终端生态</span></h2>
+              <p class="next__go"><a class="go go--ink go--stretch" href="https://luma.com/x2qerafa" target="_blank" rel="noopener noreferrer">去报名<span class="sr-only">：上海一周年庆祝（在新窗口打开）</span><svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg></a></p>
+            </article>
+
+            <!-- 杭州在筹备中：没有报名页，所以这里不放链接 -->
+            <article class="next" id="next-hz" aria-labelledby="next-title-hz">
+              <p class="next__head"><span>筹备中</span><span>杭州</span></p>
+              <p class="next__date"><span class="next__cn">待定</span></p>
+              <p class="next__when">日期待定</p>
+              <h2 class="next__title" id="next-title-hz">杭州站</h2>
+              <p class="next__go next__state">尚未开放报名</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="events" aria-labelledby="events-title">
+        <header class="sec__head">
+          <p class="sec__idx"><span aria-hidden="true">01</span>活动</p>
+          <h2 id="events-title">即将到来的活动</h2>
+          <p class="sec__aside">时间均为北京时间（UTC+8）</p>
+        </header>
+
+        <ol class="events">
+          <li>
+            <a class="ev" href="https://luma.com/43j4ovh8" target="_blank" rel="noopener noreferrer">
+              <span class="ev__date"><time datetime="2026-12-12"><span aria-hidden="true">12.12</span><span class="sr-only">12 月 12 日</span></time></span>
+              <span class="ev__when">周六<br>13:30–20:00</span>
+              <span class="ev__city">北京</span>
+              <span class="ev__title">AAIF 北京 Meetup <span class="sep" aria-hidden="true">·</span> <span class="nw">AAIF 成立一周年庆祝酒会</span></span>
+              <span class="ev__state">去报名<svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg><span class="sr-only">（在新窗口打开）</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="ev" href="https://luma.com/01mkdbpc" target="_blank" rel="noopener noreferrer">
+              <span class="ev__date"><time datetime="2026-12-12"><span aria-hidden="true">12.12</span><span class="sr-only">12 月 12 日</span></time></span>
+              <span class="ev__when">周六<br>14:00–18:00</span>
+              <span class="ev__city">深圳</span>
+              <span class="ev__title" lang="en">AAIF Shenzhen × <span class="nw">muShenzhen Meetup #2</span></span>
+              <span class="ev__state">去报名<svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg><span class="sr-only">（在新窗口打开）</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="ev" href="https://luma.com/x2qerafa" target="_blank" rel="noopener noreferrer">
+              <span class="ev__date"><time datetime="2026-12-13"><span aria-hidden="true">12.13</span><span class="sr-only">12 月 13 日</span></time></span>
+              <span class="ev__when">周日<br>14:00–17:30</span>
+              <span class="ev__city">上海</span>
+              <span class="ev__title">AAIF 一周年庆祝 &amp; 智能体终端生态</span>
+              <span class="ev__state">去报名<svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg><span class="sr-only">（在新窗口打开）</span></span>
+            </a>
+          </li>
+          <li>
+            <div class="ev is-pending">
+              <span class="ev__date"><span aria-hidden="true">01.25–31</span><span class="sr-only">2027 年 1 月 25 日至 31 日</span></span>
+              <span class="ev__when">周一至周日</span>
+              <span class="ev__city ev__city--num" aria-hidden="true">2027</span>
+              <span class="ev__title" lang="en">Agentic AI Week</span>
+              <span class="ev__state">社区筹备中</span>
+            </div>
+          </li>
+          <li>
+            <div class="ev is-pending">
+              <span class="ev__date ev__date--cn">待定</span>
+              <span class="ev__when">日期待定</span>
+              <span class="ev__city">杭州</span>
+              <span class="ev__title">杭州站</span>
+              <span class="ev__state">筹备中</span>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="sec" id="cities" aria-labelledby="cities-title">
+        <header class="sec__head">
+          <p class="sec__idx"><span aria-hidden="true">02</span>城市</p>
+          <h2 id="cities-title">城市目录</h2>
+        </header>
+
+        <ul class="cities">
+          <li>
+            <a class="city" href="https://luma.com/aaif-beijing" target="_blank" rel="noopener noreferrer">
+              <span class="city__idx" aria-hidden="true">01</span>
+              <span class="city__name">北京</span>
+              <span class="city__org"><span class="city__org-label">组织者</span>宋净超（Jimmy Song）、段少婷、刘卓鑫、王蓉、张慧</span>
+              <span class="city__link">城市日历<svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg><span class="sr-only">（在新窗口打开）</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="city" href="https://luma.com/01mkdbpc" target="_blank" rel="noopener noreferrer">
+              <span class="city__idx" aria-hidden="true">02</span>
+              <span class="city__name">深圳</span>
+              <span class="city__org"><span class="city__org-label">组织者</span>Chris 杨</span>
+              <span class="city__link"><span aria-hidden="true">12.12</span><span class="sr-only">12 月 12 日</span> 活动<svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg><span class="sr-only">（在新窗口打开）</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="city" href="https://luma.com/x2qerafa" target="_blank" rel="noopener noreferrer">
+              <span class="city__idx" aria-hidden="true">03</span>
+              <span class="city__name">上海</span>
+              <span class="city__org"><span class="city__org-label">组织者</span>Richard Lin、邓辉</span>
+              <span class="city__link"><span aria-hidden="true">12.13</span><span class="sr-only">12 月 13 日</span> 活动<svg class="arr" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1.5 8.5 8.5 1.5M3 1.5h5.5V7"/></svg><span class="sr-only">（在新窗口打开）</span></span>
+            </a>
+          </li>
+          <li>
+            <div class="city is-pending">
+              <span class="city__idx" aria-hidden="true">04</span>
+              <span class="city__name">杭州</span>
+              <span class="city__link">筹备中</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="sec" id="about" aria-labelledby="about-title">
+        <header class="sec__head sec__head--big">
+          <p class="sec__idx"><span aria-hidden="true">03</span>关于</p>
+          <h2 id="about-title">志愿者在各城市<br class="m">组织见面。</h2>
+        </header>
+
+        <div class="split">
+          <div class="role">
+            <p class="role__label">官方头衔</p>
+            <p class="role__cn">社区活动组织者</p>
+            <p class="role__en" lang="en">Community Organizer</p>
+          </div>
+          <p class="split__text">我们是在中国各城市组织活动的志愿者，<br>官方头衔是社区活动组织者。<br>这个站点用来公布已经公开的活动，<br>并把开放的智能体标准讲清楚。</p>
+        </div>
+      </section>
+
+      <section class="sec" id="join" aria-labelledby="join-title">
+        <div class="join">
+          <svg class="arcs join__art" viewBox="0 0 440 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <circle cx="-200" cy="500" r="570.1"/>
+            <circle cx="700" cy="520" r="582.6"/>
+            <circle cx="120" cy="-380" r="545.7"/>
+            <circle cx="50" cy="900" r="776.2"/>
+            <rect x="243" y="143" width="14" height="14"/>
+          </svg>
+          <p class="sec__idx"><span aria-hidden="true">04</span>加入</p>
+          <h2 class="join__title" id="join-title">来参加，<br>或在所在城市<br class="m">一起组织。</h2>
+          <div class="join__body">
+            <p>可以报名已经公布的活动，<br>也可以协助所在城市的组织工作。<br>这里不设虚构的官方申请表，<br>具体参与方式以公开渠道为准。</p>
+            <p class="join__link"><a class="go go--ink" href="#events">看已公布的活动<svg class="arr arr--up" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M5 9V1.5M1.5 5 5 1.5 8.5 5"/></svg></a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p class="foot__word"><span class="dot" aria-hidden="true"></span>AAIF 中文社区</p>
+
+      <div class="foot__grid">
+        <div class="foot__id">
+          <p>志愿者运营的社区站点</p>
+          <p>域名由 <a class="ext" href="https://github.com/vivo" target="_blank" rel="noopener noreferrer">vivo<span class="sr-only">（在新窗口打开）</span></a> 赞助。</p>
+        </div>
+        <div class="foot__legal">
+          <p>这是由志愿者维护的中文社区站点，<br>与 Agentic AI Foundation 无隶属、赞助或背书关系。<br>官方网站：<a class="ext" href="https://aaif.io/" target="_blank" rel="noopener noreferrer">aaif.io<span class="sr-only">（在新窗口打开）</span></a></p>
+          <p lang="en" class="foot__tm">AAIF and the AAIF logo design are registered trademarks of the Linux Foundation.</p>
+        </div>
+        <p class="foot__mark">
+          <img src="/brand/AAIF_Symbol_White.svg" width="40" height="40" alt="Agentic AI Foundation 官方标识">
+        </p>
+      </div>
+
+      <p class="foot__base"><a class="foot__top" href="#top">回到顶部<svg class="arr arr--up" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M5 9V1.5M1.5 5 5 1.5 8.5 5"/></svg></a></p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
