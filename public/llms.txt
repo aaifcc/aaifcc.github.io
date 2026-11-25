@@ -14,6 +14,7 @@
 - 英文版网页（English HTML）：`/en/`
 - 英文版 Markdown（English Markdown）：`/en/index.md`
 - 官方网站（Official Foundation Site）：<https://aaif.io/>
+- 申请成为 AAIF 本地组织者（Become an AAIF Organizer）：<https://docs.google.com/forms/d/e/1FAIpQLScuUbCYJc9JNidWZpjQJXaxr2aFHYG5vFh9jJ0JxxaTahK7KA/viewform>
 - 域名赞助（Domain Sponsor）：[vivo](https://github.com/vivo)
 - 开源仓库（Source Repository）：<https://github.com/aaifcc/aaifcc.github.io>
 - 协作规范与 Agent 会话记录：`AGENTS.md`、`docs/agent-sessions/`
@@ -34,6 +35,7 @@
 - **时间 / Time**：14:00–18:00（UTC+8）
 - **地点 / Location**：广东省深圳市南山区（具体地址报名后在 Luma 页面可见 / Nanshan District, Shenzhen; exact address shown after registration）
 - **报名链接 / Registration**：<https://luma.com/01mkdbpc>
+- **城市日历 / City Calendar**：<https://luma.com/aaif-shenzhen>
 
 ### 3. 上海 · AAIF 一周年庆祝 & 智能体终端生态 (Shanghai)
 - **状态 / Status**：已开放报名 / Registration open
@@ -41,22 +43,30 @@
 - **时间 / Time**：14:00–17:30（UTC+8）
 - **地点 / Location**：上海市（具体地址报名后在 Luma 页面可见 / Shanghai; exact address shown after registration）
 - **报名链接 / Registration**：<https://luma.com/x2qerafa>
+- **城市日历 / City Calendar**：<https://luma.com/aaif-shanghai>
 
 ### 4. Agentic AI Week (2027)
 - **状态 / Status**：社区筹备中 / In community preparation
 - **日期 / Dates**：2027-01-25 至 2027-01-31（周一至周日 / Mon–Sun）
 
-### 5. 杭州站 (Hangzhou)
-- **状态 / Status**：筹备中，日期待定 / In preparation, Date TBD
+### 5. 杭州 · AAIF 杭州站 (Hangzhou)
+- **状态 / Status**：已成立 Chapter，下一场活动日期待定 / Active chapter, next meetup date TBD
+- **城市日历 / City Calendar**：<https://luma.com/aaif-hangzhou>
 
 ## 城市目录与组织者 / Cities & Community Organizers
 
-| 城市 / City | 社区活动组织者 / Community Organizers | 公开渠道 / Link |
-| --- | --- | --- |
-| 北京 / Beijing | 宋净超（Jimmy Song）、段少婷（Fiona Duan）、刘卓鑫（Zhuoxin Liu）、王蓉、张慧 | [城市日历 / Calendar](https://luma.com/aaif-beijing) |
-| 深圳 / Shenzhen | Chris 杨（Chris Yang） | [12.12 活动 / Event](https://luma.com/01mkdbpc) |
-| 上海 / Shanghai | Richard Lin、邓辉（Hui Deng） | [12.13 活动 / Event](https://luma.com/x2qerafa) |
-| 杭州 / Hangzhou | 筹备中 / In preparation | 筹备中 / In preparation |
+| 城市 / City | 社区活动组织者 / Community Organizers | 城市日历 / City Calendar | 近期活动 / Upcoming Event |
+| --- | --- | --- | --- |
+| 北京 / Beijing | 宋净超（Jimmy Song）、段少婷（Fiona Duan）、刘卓鑫（Zhuoxin Liu）、王蓉、张慧 | <https://luma.com/aaif-beijing> | [12.12 报名](https://luma.com/43j4ovh8) |
+| 深圳 / Shenzhen | Chris 杨（Chris Yang） | <https://luma.com/aaif-shenzhen> | [12.12 报名](https://luma.com/01mkdbpc) |
+| 上海 / Shanghai | Richard Lin、邓辉（Hui Deng） | <https://luma.com/aaif-shanghai> | [12.13 报名](https://luma.com/x2qerafa) |
+| 杭州 / Hangzhou | Amber Wang | <https://luma.com/aaif-hangzhou> | 待公布 / TBD |
+
+## 如何加入 / How to Join
+
+1. **参加活动并订阅城市日历**：通过上方 Luma 链接报名近期活动，或订阅所在城市日历接收新活动通知。
+2. **加入各城市 Chapter 微信群**：北京、深圳、上海、杭州均设有本地交流群，申请入群请备注「AAIF 中文社区」（群二维码每 7 天由社区定期更新，可在活动现场或通过城市组织者获取最新入口）。
+3. **在其他城市申请成为组织者**：向 Agentic AI Foundation 提交官方申请成为本地 Community Organizer：<https://docs.google.com/forms/d/e/1FAIpQLScuUbCYJc9JNidWZpjQJXaxr2aFHYG5vFh9jJ0JxxaTahK7KA/viewform>
 
 ## 商标声明 / Trademark
 

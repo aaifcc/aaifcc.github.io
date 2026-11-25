@@ -34,6 +34,7 @@
 - **Time**: 14:00–18:00 (UTC+8)
 - **Location**: Nanshan District, Shenzhen, Guangdong (exact address visible on Luma after registration)
 - **Registration**: <https://luma.com/01mkdbpc>
+- **City Calendar**: <https://luma.com/aaif-shenzhen>
 
 ### 3. Shanghai · AAIF 1st Anniversary & Agentic AI Terminal Ecosystem
 - **Status**: Registration open
@@ -41,27 +42,30 @@
 - **Time**: 14:00–17:30 (UTC+8)
 - **Location**: Shanghai (exact address visible on Luma after registration)
 - **Registration**: <https://luma.com/x2qerafa>
+- **City Calendar**: <https://luma.com/aaif-shanghai>
 
 ### 4. Agentic AI Week (2027)
 - **Status**: In community preparation (registration not yet open)
 - **Dates**: January 25–31, 2027 (Mon–Sun)
 
-### 5. Hangzhou Chapter
-- **Status**: In preparation (date TBD, registration not yet open)
+### 5. Hangzhou · AAIF Hangzhou Chapter
+- **Status**: Active chapter (next meetup date TBD)
+- **City Calendar**: <https://luma.com/aaif-hangzhou>
 
 ## Cities & Community Organizers
 
-| City | Community Organizers | Public Link |
-| --- | --- | --- |
-| Beijing | Jimmy Song, Fiona Duan, Zhuoxin Liu, Wang Rong, Zhang Hui | [City Calendar](https://luma.com/aaif-beijing) |
-| Shenzhen | Chris Yang | [Dec 12 Event](https://luma.com/01mkdbpc) |
-| Shanghai | Richard Lin, Hui Deng | [Dec 13 Event](https://luma.com/x2qerafa) |
-| Hangzhou | In preparation | In preparation |
+| City | Community Organizers | City Calendar | Upcoming Event |
+| --- | --- | --- | --- |
+| Beijing | Jimmy Song, Fiona Duan, Zhuoxin Liu, Wang Rong, Zhang Hui | [Luma Calendar](https://luma.com/aaif-beijing) | [Dec 12 Event](https://luma.com/43j4ovh8) |
+| Shenzhen | Chris Yang | [Luma Calendar](https://luma.com/aaif-shenzhen) | [Dec 12 Event](https://luma.com/01mkdbpc) |
+| Shanghai | Richard Lin, Hui Deng | [Luma Calendar](https://luma.com/aaif-shanghai) | [Dec 13 Event](https://luma.com/x2qerafa) |
+| Hangzhou | Amber Wang | [Luma Calendar](https://luma.com/aaif-hangzhou) | Next event TBD |
 
 ## How to Join
 
-- Register for any publicly announced event via the Luma links above.
-- Volunteers interested in helping organize local meetups can connect through our public event channels (no fabricated application forms are hosted on this site).
+1. **Attend meetups & follow city calendars**: Register for upcoming in-person events or subscribe to your local chapter's Luma calendar.
+2. **Join local Chapter WeChat groups**: Beijing, Shenzhen, Shanghai, and Hangzhou each maintain a local community group. Please note "AAIF Chinese Community" when requesting to join (group QR codes expire every 7 days and are refreshed by organizers).
+3. **Apply to organize in your city**: Apply directly to the Agentic AI Foundation to become a local Community Organizer: <https://docs.google.com/forms/d/e/1FAIpQLScuUbCYJc9JNidWZpjQJXaxr2aFHYG5vFh9jJ0JxxaTahK7KA/viewform>
 
 ## Trademark Notice
 
