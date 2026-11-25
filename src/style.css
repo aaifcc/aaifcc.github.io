@@ -56,8 +56,8 @@ body {
   overflow-x: clip;
   background: var(--bg);
   color: var(--fg);
-  font: 400 1rem/1.75 var(--sans);
-  letter-spacing: 0;
+  font: 400 1rem/1.8 var(--sans);
+  letter-spacing: 0.01em;
   word-break: keep-all;
   line-break: strict;
   overflow-wrap: break-word;
@@ -946,11 +946,11 @@ a.ev:focus-visible .ev__state {
 .about-col {
   display: flex;
   flex-direction: column;
-  padding: 40px 36px 40px 0;
+  padding: 48px 48px 48px 0;
 }
 
 .about-col + .about-col {
-  padding: 40px 0 40px 36px;
+  padding: 48px 0 48px 48px;
   border-left: 1px solid var(--line);
 }
 
@@ -960,30 +960,31 @@ a.ev:focus-visible .ev__state {
 }
 
 .about-col h3 {
-  margin-top: 12px;
+  margin-top: 14px;
   font: 500 1.625rem/1.35 var(--display);
   word-break: normal;
 }
 
 .about-col p:not(.about-col__label):not(.about-col__links) {
+  max-width: 44ch;
   margin-top: 16px;
   color: var(--fg-2);
   font-size: 1rem;
-  line-height: 1.85;
+  line-height: 1.9;
   word-break: normal;
 }
 
 .about-col__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 22px;
+  gap: 8px 24px;
   margin-top: auto;
-  padding-top: 22px;
+  padding-top: 24px;
 }
 
 .proj {
-  padding-top: 44px;
-  padding-bottom: 44px;
+  padding-top: 52px;
+  padding-bottom: 52px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -993,7 +994,7 @@ a.ev:focus-visible .ev__state {
   align-items: baseline;
   justify-content: space-between;
   gap: 8px 16px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .proj__label {
@@ -1012,25 +1013,24 @@ a.ev:focus-visible .ev__state {
   border-bottom: 1px solid currentColor;
 }
 
+/* 开放式瑞士索引排布，去掉沉重的四周方框，留出呼吸感 */
 .proj__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  column-gap: 40px;
 }
 
 .proj__grid > li {
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
 }
 
 .proj__item {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 20px 22px 22px;
+  padding: 20px 10px 24px 0;
   text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .proj__name {
@@ -1045,15 +1045,8 @@ a.ev:focus-visible .ev__state {
   color: var(--coral);
 }
 
-.proj__sub {
-  margin-top: 4px;
-  color: var(--lilac);
-  font: 400 0.75rem/1.5 var(--mono);
-  transition: color 0.2s ease;
-}
-
 .proj__desc {
-  margin-top: 12px;
+  margin-top: 8px;
   color: var(--fg-2);
   font-size: 0.9375rem;
   line-height: 1.7;
@@ -1062,21 +1055,20 @@ a.ev:focus-visible .ev__state {
 }
 
 .proj__more {
-  margin-top: 16px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
   color: var(--fg-3);
   font: 400 0.8125rem/1.7 var(--mono);
 }
 
 @media (hover: hover) {
-  .proj__item:hover {
-    background: var(--lilac);
+  .proj__item:hover .proj__name {
+    color: var(--coral);
   }
 
-  .proj__item:hover .proj__name,
-  .proj__item:hover .proj__name .arr,
-  .proj__item:hover .proj__sub,
   .proj__item:hover .proj__desc {
-    color: var(--ink);
+    color: var(--fg);
   }
 
   .proj__item:hover .arr {
@@ -1085,16 +1077,11 @@ a.ev:focus-visible .ev__state {
 }
 
 .proj__item:focus-visible {
-  background: var(--lilac);
-  outline-offset: -2px;
-  outline-color: var(--ink);
+  outline-offset: 2px;
 }
 
-.proj__item:focus-visible .proj__name,
-.proj__item:focus-visible .proj__name .arr,
-.proj__item:focus-visible .proj__sub,
-.proj__item:focus-visible .proj__desc {
-  color: var(--ink);
+.proj__item:focus-visible .proj__name {
+  color: var(--coral);
 }
 
 .split {
@@ -1189,17 +1176,22 @@ a.ev:focus-visible .ev__state {
 
 .join__ways {
   grid-column: 2 / span 7;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px 24px;
   margin-top: 44px;
-  padding-top: 28px;
   border-top: 1px solid var(--ink);
 }
 
 .join__way {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 8px 24px;
+  padding-block: 24px;
+  border-bottom: 1px solid rgb(11 10 9 / 0.28);
+}
+
+.join__way:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .join__way-idx {
@@ -1207,13 +1199,14 @@ a.ev:focus-visible .ev__state {
   color: var(--ink-2);
 }
 
-.join__way h3 {
-  margin-top: 8px;
+.join__way-main h3 {
   font: 600 1.125rem/1.4 var(--sans);
 }
 
-.join__way p {
-  margin-top: 10px;
+.join__way-main p {
+  max-width: 48ch;
+  margin-top: 6px;
+  color: var(--ink-2);
   font-size: 0.9375rem;
   line-height: 1.75;
   word-break: normal;
@@ -1222,13 +1215,18 @@ a.ev:focus-visible .ev__state {
 .join__way-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
-  margin-top: auto;
-  padding-top: 16px;
+  justify-content: flex-end;
+  gap: 8px 18px;
+}
+
+.join__way-note {
+  color: var(--ink-2);
+  font: 400 0.8125rem/1.6 var(--mono);
 }
 
 .join__way-links .go {
   position: relative;
+  white-space: nowrap;
 }
 
 .join__way-links .go::before {
@@ -1510,9 +1508,15 @@ html[lang="en"] .foot__word {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .join__ways {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .join__way {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 8px 16px;
+  }
+
+  .join__way-links {
+    grid-column: 2;
+    justify-content: flex-start;
+    margin-top: 6px;
   }
 }
 
