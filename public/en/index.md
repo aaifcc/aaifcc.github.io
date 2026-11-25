@@ -20,6 +20,19 @@
   - Agent Discovery File: `/llms.txt`
 - Time Zone: All event times below are in Beijing Time (UTC+8).
 
+## About AAIF & the Chinese Community
+
+- **What is the Agentic AI Foundation (AAIF)**: A neutral, open foundation under the Linux Foundation hosting open protocols and open-source projects for agentic AI, with working groups covering reliability, security & privacy, observability, identity & trust, and workflows (<https://aaif.io/about/>).
+- **Key Open-Source Projects Hosted by AAIF** (full directory: <https://aaif.io/projects/>):
+  - **MCP (Model Context Protocol)**: <https://github.com/modelcontextprotocol> — Open protocol connecting LLM apps with external tools and data sources
+  - **A2A (Agent2Agent)**: <https://github.com/a2aproject/A2A> — Open protocol for secure cross-platform agent communication and collaboration
+  - **AGENTS.md**: <https://github.com/agentsmd/agents.md> — Simple, open format for guiding coding agents
+  - **Agent Skills**: <https://github.com/agentskills/agentskills> — Open format for reusable agent expertise and workflows
+  - **Goose**: <https://github.com/block/goose> — Open-source, extensible AI agent working with any LLM
+  - **agentgateway**: <https://github.com/agentgateway/agentgateway> — Secure, scalable gateway connecting agents, models, tools, and APIs
+  - Additional hosted projects: OpenSandbox, Open Responses, OpenEnv, Agent Router
+- **AAIF Chinese Community**: An open, volunteer-run community across Chinese cities (not an official foundation website) committed to vendor-neutral technical exchange and in-person meetups that help builders take open agentic standards from demo to production.
+
 ## Upcoming Events
 
 ### 1. Beijing · AAIF Beijing Meetup · AAIF 1st Anniversary

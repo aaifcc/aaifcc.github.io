@@ -21,6 +21,19 @@
 - 域名赞助（Domain Sponsor）：[vivo](https://github.com/vivo)
 - 协作规范与 Agent 会话记录：`AGENTS.md`、`docs/agent-sessions/`
 
+## 关于 AAIF 与中文社区 / About AAIF & Chinese Community
+
+- **什么是 AAIF**：Agentic AI Foundation（AAIF）是 Linux 基金会旗下的中立开放基金会，托管智能体领域的开放协议与开源项目，并设有可靠性、安全隐私、可观测性、身份信任、工作流等开放工作组（<https://aaif.io/about/>）。
+- **AAIF 托管的核心开源项目**（完整列表见 <https://aaif.io/projects/>）：
+  - **MCP (Model Context Protocol)**：<https://github.com/modelcontextprotocol> — 连接大模型应用与外部工具/数据源的开放协议
+  - **A2A (Agent2Agent)**：<https://github.com/a2aproject/A2A> — 跨平台、跨框架的智能体通信与协作协议
+  - **AGENTS.md**：<https://github.com/agentsmd/agents.md> — 面向 Coding Agent 的轻量开放指引格式
+  - **Agent Skills**：<https://github.com/agentskills/agentskills> — 可复用智能体技能的开放格式
+  - **Goose**：<https://github.com/block/goose> — 开源可扩展的 AI Agent
+  - **agentgateway**：<https://github.com/agentgateway/agentgateway> — 智能体、模型、工具与 API 之间的安全可扩展网关
+  - 其他托管项目：OpenSandbox、Open Responses、OpenEnv、Agent Router
+- **AAIF 中文社区**：由中国各城市志愿者共同维护的开放社区（非基金会官方站点），坚持供应商中立与纯技术分享，定期组织各城市线下 Meetup，推动开放智能体标准从 Demo 走向工程落地。
+
 ## 即将到来的活动 / Upcoming Events (UTC+8)
 
 ### 1. 北京 · AAIF 北京 Meetup · AAIF 成立一周年庆祝酒会 (Beijing)
