@@ -1,10 +1,16 @@
 import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { defineConfig } from "vite";
+
+const HTML_ENTRIES = [
+  resolve(process.cwd(), "index.html"),
+  resolve(process.cwd(), "en/index.html"),
+];
 
 /**
  * 中文字体包按 unicode-range 切成一百多片。页面是静态的，用到的字是固定的，
- * 所以构建时只保留 index.html 里实际出现的字所在的分片，其余 @font-face 和字体文件都丢掉。
- * 只影响 `vite build`；改了文案重新构建即可。
+ * 所以构建时扫描中英文全部入口 HTML 里实际出现的字符，只保留用到的分片，
+ * 其余 @font-face 和字体文件都丢掉。只影响 `vite build`；改了文案重新构建即可。
  */
 function pruneUnusedFontSlices() {
   let used = new Set();
@@ -23,12 +29,15 @@ function pruneUnusedFontSlices() {
     name: "prune-unused-font-slices",
     apply: "build",
     buildStart() {
-      const html = readFileSync(new URL("./index.html", import.meta.url), "utf8");
-      const text = html
-        .replace(/<(script|style)[\s\S]*?<\/\1>/gi, "")
-        .replace(/<!--[\s\S]*?-->/g, "")
-        .replace(/<[^>]+>/g, "");
-      used = new Set([...text].map((ch) => ch.codePointAt(0)));
+      used = new Set();
+      for (const entry of HTML_ENTRIES) {
+        const html = readFileSync(entry, "utf8");
+        const text = html
+          .replace(/<(script|style)[\s\S]*?<\/\1>/gi, "")
+          .replace(/<!--[\s\S]*?-->/g, "")
+          .replace(/<[^>]+>/g, "");
+        for (const ch of text) used.add(ch.codePointAt(0));
+      }
       for (let cp = 0x20; cp < 0x7f; cp++) used.add(cp); // 基本拉丁字符始终保留
     },
     generateBundle(_, bundle) {
@@ -48,9 +57,39 @@ function pruneUnusedFontSlices() {
   };
 }
 
+function injectHreflangLinks() {
+  return {
+    name: "inject-hreflang-links",
+    transformIndexHtml: {
+      order: "post",
+      handler(html, ctx) {
+        const isEn = ctx.filename.replace(/\\/g, "/").endsWith("/en/index.html");
+        const tags = isEn
+          ? [
+              { tag: "link", attrs: { rel: "alternate", hreflang: "zh-CN", href: "../" }, injectTo: "head" },
+              { tag: "link", attrs: { rel: "alternate", hreflang: "en", href: "./" }, injectTo: "head" },
+            ]
+          : [
+              { tag: "link", attrs: { rel: "alternate", hreflang: "zh-CN", href: "./" }, injectTo: "head" },
+              { tag: "link", attrs: { rel: "alternate", hreflang: "en", href: "./en/" }, injectTo: "head" },
+            ];
+        return { html, tags };
+      },
+    },
+  };
+}
+
 // 相对路径输出：dist 可以放在任意子目录或直接用静态服务器预览。
-// 这里不配置任何自定义域名或部署目标。
+// 同时输出中文首页（/）与英文版（/en/）。
 export default defineConfig({
   base: "./",
-  plugins: [pruneUnusedFontSlices()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: HTML_ENTRIES[0],
+        en: HTML_ENTRIES[1],
+      },
+    },
+  },
+  plugins: [pruneUnusedFontSlices(), injectHreflangLinks()],
 });

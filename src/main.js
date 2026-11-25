@@ -4,7 +4,7 @@
 
 function initNav() {
   const bar = document.querySelector(".bar");
-  const links = [...document.querySelectorAll(".nav a")];
+  const links = [...document.querySelectorAll('.nav a[href^="#"]')];
   const sections = links.map((a) => document.querySelector(a.getAttribute("href")));
   let queued = false;
 
@@ -47,6 +47,10 @@ function initNextSet() {
   const toggle = set.querySelector(".nextset__toggle");
   const region = set.querySelector(".nextset__slides");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+  const isEn = (document.documentElement.lang || "").toLowerCase().startsWith("en");
+  const LABEL_PAUSE = isEn ? "Pause automatic rotation" : "暂停自动切换";
+  const LABEL_PLAY = isEn ? "Start automatic rotation" : "开始自动切换";
+  const ROLE_DESC = isEn ? "Carousel" : "轮播面板";
   const INTERVAL = 7000;
 
   let index = 0;
@@ -79,7 +83,7 @@ function initNextSet() {
     }
     // 自动轮转时不打扰读屏；停下后，切换的内容会被读出
     region.setAttribute("aria-live", auto ? "off" : "polite");
-    toggle.setAttribute("aria-label", auto ? "暂停自动切换" : "开始自动切换");
+    toggle.setAttribute("aria-label", auto ? LABEL_PAUSE : LABEL_PLAY);
     toggle.classList.toggle("is-paused", !auto);
   }
 
@@ -145,7 +149,7 @@ function initNextSet() {
     }).observe(set);
   }
 
-  set.setAttribute("aria-roledescription", "轮播面板");
+  set.setAttribute("aria-roledescription", ROLE_DESC);
   slides.forEach((slide, i) => {
     slide.setAttribute("role", "tabpanel");
     slide.setAttribute("aria-labelledby", tabs[i].id);

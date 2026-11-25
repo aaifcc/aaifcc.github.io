@@ -300,6 +300,19 @@ br.m {
   opacity: 1;
 }
 
+.nav a.nav__lang {
+  margin-left: 4px;
+  padding-left: 16px;
+  border-left: 1px solid var(--line);
+  color: var(--lilac);
+  font: 400 0.8125rem/1.4 var(--mono);
+  white-space: nowrap;
+}
+
+.nav a.nav__lang::after {
+  display: none;
+}
+
 @media (hover: hover) {
   .nav a:hover {
     color: var(--fg);
@@ -1031,9 +1044,42 @@ a.city:focus-visible .city__name {
 
 .foot__base {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   margin-top: 56px;
   font: 400 0.8125rem/1.6 var(--mono);
+}
+
+.foot__agent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  color: var(--fg-3);
+}
+
+.foot__agent a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--fg-2);
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 0.3em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+@media (hover: hover) {
+  .foot__agent a:hover,
+  .foot__top:hover {
+    color: var(--fg);
+  }
+
+  .foot__agent a:hover {
+    text-decoration-color: var(--coral);
+  }
 }
 
 .foot__top {
@@ -1042,6 +1088,46 @@ a.city:focus-visible .city__name {
   min-height: 44px;
   color: var(--fg-2);
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* ---------- 英文版排版微调 ---------- */
+
+html[lang="en"] body {
+  word-break: normal;
+}
+
+html[lang="en"] .hero__title {
+  font-size: clamp(2.35rem, 5.4vw, 5.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+html[lang="en"] .ev__city {
+  font-size: clamp(1.375rem, 2vw, 1.875rem);
+}
+
+html[lang="en"] .city__name {
+  writing-mode: horizontal-tb;
+  margin-top: 32px;
+  font-size: clamp(2.125rem, 3.3vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+html[lang="en"] .sec__head--big h2 {
+  font-size: clamp(2.25rem, 4.4vw, 4.25rem);
+  line-height: 1.12;
+}
+
+html[lang="en"] .join__title {
+  font-size: clamp(2.125rem, 4vw, 3.75rem);
+  line-height: 1.12;
+}
+
+html[lang="en"] .foot__word {
+  font-size: min(7.1vw, 7.25rem);
+  letter-spacing: -0.025em;
 }
 
 /* ---------- 中等宽度 ---------- */
@@ -1118,7 +1204,7 @@ a.city:focus-visible .city__name {
     grid-column: 1 / -1;
     grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: var(--gap);
     align-self: stretch;
     align-items: center;
@@ -1130,7 +1216,14 @@ a.city:focus-visible .city__name {
     justify-content: flex-start;
     min-height: 48px;
     padding-inline: 0;
-    font-size: 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .nav a.nav__lang {
+    justify-content: flex-end;
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
   }
 
   .nav a::after {
@@ -1340,6 +1433,24 @@ a.city:focus-visible .city__name {
 
   .foot__word {
     font-size: 12.4vw;
+  }
+
+  html[lang="en"] .foot__word {
+    font-size: 7.4vw;
+  }
+
+  html[lang="en"] .hero__title {
+    font-size: clamp(2rem, 9.2vw, 3.25rem);
+    line-height: 1.12;
+  }
+
+  html[lang="en"] .city__name {
+    margin-top: 0;
+    font-size: 2.25rem;
+  }
+
+  html[lang="en"] .nextset__tab {
+    font-size: 0.8125rem;
   }
 
   .foot__grid {

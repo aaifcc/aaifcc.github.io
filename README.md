@@ -17,10 +17,13 @@ npm run build    # 构建静态产物至 dist/（自动按页面字符裁剪中�
 npm run preview  # 本地预览生产构建
 ```
 
-## 专供 Agent 访问与协作
+## 双语版、Agent 入口与会话共享
 
-- **站点 Agent 入口**：构建后提供 `/llms.txt` 与 `/index.md`（源文件位于 `public/llms.txt`、`public/index.md`），并在 HTML `<head>` 中通过 `<link rel="alternate" type="text/markdown">` 声明。
-- **人机协作规范**：见根目录 [`AGENTS.md`](./AGENTS.md)，包含品牌红线、视觉系统、WCAG 2.2 无障碍要求与活动同步流程。
+- **静态中英双语（零插件）**：中文首页 `/`（`index.html`）与英文版 `/en/`（`en/index.html`），顶栏支持 `EN` / `中文` 互切。
+- **专供 Agent 访问的 Markdown**：构建后自动提供 `/llms.txt`（双语总览）、`/index.md`（中文）与 `/en/index.md`（英文），并在 HTML `<head>` 通过 `<link rel="alternate" type="text/markdown">` 与页脚声明。
+- **人机协作规范与会话共享**：
+  - [`AGENTS.md`](./AGENTS.md)：AAIF 标准的持久协作规范（品牌红线、视觉系统、WCAG 2.2 无障碍基线与 Luma 同步约定）；
+  - [`docs/agent-sessions/`](./docs/agent-sessions/README.md)：脱敏后的 Coding Agent 会话决策记录与后续接入 [PowerContext](https://github.com/oceanbase/powercontext) 的评估建议。
 
 ## 部署说明（GitHub Pages）
 

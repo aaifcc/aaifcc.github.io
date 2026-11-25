@@ -41,10 +41,12 @@
 
 ---
 
-## 4. 专供 Agent 访问的站点文件
+## 4. 双语版与专供 Agent 访问的站点文件
 
-- `public/llms.txt` 与 `public/index.md` 会在构建时原样输出到站点根目录（`/llms.txt`、`/index.md`），并在 `index.html` `<head>` 通过 `<link rel="alternate" type="text/markdown">` 声明。
-- **每次更新活动时间、地点、链接或城市组织者时，必须同步更新 `index.html`、`public/llms.txt` 和 `public/index.md`**，保持人类视图与 Agent 视图一致。
+- **静态双语版（零插件）**：`index.html`（中文首页 `/`）与 `en/index.html`（英文版 `/en/`）由 Vite 多入口统一构建，通过顶栏 `EN` / `中文` 互跳，并在 `<head>` 声明 `hreflang`。**不要引入第三方自动翻译插件**，以免误译「社区活动组织者 / Community Organizer」或破坏无障碍语义。
+- **专供 Agent 访问的 Markdown**：`public/llms.txt`（双语总览）、`public/index.md`（中文版）、`public/en/index.md`（英文版）会在构建时原样输出到站点根目录与 `/en/`，并在 `<head>` 通过 `<link rel="alternate" type="text/markdown">` 与页脚暴露。
+- **会话与上下文共享**：迭代决策与脱敏会话交接记录保存在 `docs/agent-sessions/`（见 `docs/agent-sessions/README.md`，含后续接入开源上下文服务 PowerContext 的评估建议）。
+- **同步要求**：**每次更新活动时间、地点、链接或城市组织者时，必须同步更新 `index.html`、`en/index.html`、`public/llms.txt`、`public/index.md` 和 `public/en/index.md`**，保持中/英人类视图与 Agent 视图完全一致。
 
 ---
 
